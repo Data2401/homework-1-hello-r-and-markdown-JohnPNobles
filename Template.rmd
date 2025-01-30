@@ -21,6 +21,8 @@ It has the variables "x", "y", and "dataset".
 
 ### Exercise 2
 
+Let's plot the dino dataset:
+
 ```{r plot-dino, fig.height=3, fig.width=6}
 dino_data <- datasaurus_dozen %>%
   filter(dataset == "dino")
@@ -28,12 +30,16 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
 
+Let's calculate the correlation coefficient of the dino dataset:
+
 ```{r cor-dino}
 dino_data %>%
   summarize(r = cor(x, y))
 ```
 
 ### Exercise 3
+
+Let's plot the star dataset:
 
 ```{r plot-star}
 star_data <- datasaurus_dozen %>%
@@ -51,12 +57,16 @@ star_data %>%
 
 ### Exercise 4
 
+Let's plot the circle dataset:
+
 ```{r plot-circle}
 circle_data <- datasaurus_dozen %>%
   filter(dataset == "circle")
 ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
+
+Let's calculate the correlation coefficient for the circle dataset:
 
 ```{r cor-circle}
 circle_data %>%
